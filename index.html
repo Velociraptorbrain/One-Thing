@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f1ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>One Next Thing</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <section class="wildhorses" id="wildhorses">
+    <div class="wh-label">wildhorses</div>
+    <div class="wh-text" id="wh-text">one beat a day</div>
+    <div class="wh-meta">
+      <span id="wh-minutes">25 min</span>
+      <button class="ghost" id="wh-edit">edit</button>
+      <button class="ghost" id="wh-done">done</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>brain dump</h2>
+    <textarea id="dump" placeholder="paste anything, any order..."></textarea>
+    <button class="primary" id="breakdown">break it down</button>
+  </section>
+
+  <section class="card next">
+    <h2>one next thing</h2>
+    <div class="next-empty" id="next-empty">nothing queued. dump something above.</div>
+    <div class="next-body" id="next-body" hidden>
+      <div class="ring-wrap">
+        <svg class="ring" viewBox="0 0 160 160">
+          <circle class="ring-bg" cx="80" cy="80" r="70"/>
+          <circle class="ring-fg" id="ring-fg" cx="80" cy="80" r="70"/>
+        </svg>
+        <div class="ring-time" id="ring-time">—</div>
+      </div>
+      <p class="task-text" id="task-text"></p>
+      <div class="actions">
+        <button class="primary" id="start">start</button>
+        <button class="secondary" id="done">done</button>
+        <button class="ghost" id="later">later</button>
+      </div>
+    </div>
+    <div class="done-count" id="done-count" hidden></div>
+  </section>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
